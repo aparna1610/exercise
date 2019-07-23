@@ -7,8 +7,15 @@
             Logout
         </button>
     </p>
-    <button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button>
 
+
+    <div>
+        <input type="text" class="form-control" [(ngModel)]="member_name" name="member_name" />
+    </div>
+    <span>{{member_name}}</span>
+    <div>
+    <button class="btn btn-danger" style="width:100px" (click)="exercise1(member_name)"> Search</button>
+</div>
     </div>
 
 
