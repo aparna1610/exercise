@@ -19,4 +19,8 @@ export class AdminComponent implements OnInit {
     this.router.navigateByUrl('/login');
   }
 
+  addUser(): void {
+    this.router.navigate(['add-user']);
+  };
+  
 }
