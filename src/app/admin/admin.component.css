@@ -3,4 +3,47 @@ button{
     border-color: transparent;
     color: #fff;
     cursor: pointer;
+    width: 130%;
+   margin-right: 50px;
+   padding-right: 26px;
+   height: 45px;
 }
+
+.logoutLblPos{
+
+   position:fixed;
+   right: 12px;
+    top: 5px;
+   
+}
+
+.btnClass {
+    width:115px;
+    margin-left: 45px;
+    padding-left: 25px;
+
+}
+
+.textarea{
+  /* margin-left: -150px; */
+  margin-top: 20px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 500px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

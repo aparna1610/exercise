@@ -1,25 +1,74 @@
 <div style="text-align:center">
-    <h1>
-        Welcome Super Admin!
+    <h1 style="margin-bottom: 50px;">
+        Welcome to coding Exercise!
     </h1>
-    <p>
+    <p class="logoutLblPos">
         <button (click)="logout()">
             Logout
         </button>
     </p>
 
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+            <h2>Task 1</h2>
+            <span>
+                <label class="textarea">Enter value :
 
-    <div>
-        <input type="text" class="form-control" [(ngModel)]="member_name" name="member_name" />
+                    <input type="text" class="form-control" [(ngModel)]="member_name" name="member_name" /></label>
+            </span>
+            <p><button class="btn btn-danger" class="btnClass" style="margin-top: 35px;"
+                    (click)="exercise1(member_name)"> Click Me</button></p>
+            <p><label class="textarea">Output : <li *ngFor='let member of array1'>
+                        {{member}}
+                    </li> </label></p>
+
+        </div>
+        <div class="column" style="background-color:#bbb;">
+            <h2>Task 2</h2>
+            <span>
+                <label class="textarea">Enter value :
+
+                    <input type="text" class="form-control" [(ngModel)]="member_name1" name="member_name1" /></label>
+            </span>
+            <p><button class="btn btn-danger" class="btnClass" style="margin-top: 35px;"
+                    (click)="exercise2(member_name1)"> Click Me</button></p>
+            <p><label class="textarea">Output : <li *ngFor='let member of array2'>
+                        {{member}}
+                    </li> </label></p>
+        </div>
+        <div class="column" style="background-color:#ccc;">
+            <h2>Task 3</h2>
+            <p><button class="btn btn-danger" class="btnClass" (click)="get_people()"> Click Me</button></p>
+            <p><label class="textarea">Output : <li *ngFor='let member of people1' style="text-align: left;">
+                    {{member}}
+                </li> </label></p>
+        </div>
+        <div class="column" style="background-color:#ddd;">
+            <h2>Task 4</h2>
+            <p><button class="btn btn-danger" class="btnClass" (click)="get_people1()"> Click Me</button></p>
+            <p><label class="textarea">Output : <li *ngFor='let member of people2' style="text-align: left;">
+                    {{member}}
+                </li> </label></p>
+        </div>
     </div>
-    <span>{{member_name}}</span>
+
+    <!-- <div class="row">
+        <div class="col-md-2">
+            <label>Enter value :</label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" [(ngModel)]="member_name" name="member_name"
+                style="width: 30%;margin-left: 20px;" />
+        </div>
+    
     <div>
-    <button class="btn btn-danger" style="width:100px" (click)="exercise1(member_name)"> Search</button>
+        <button class="btn btn-danger" class="btnClass" (click)="exercise1(member_name)"> Click Me</button>
+    </div>
 </div>
-    </div>
+</div> -->
 
 
 
-<!-- <nav class="navbar navbar-light bg-primary">    
+    <!-- <nav class="navbar navbar-light bg-primary">    
     <span class="navbar-brand mb-0 h1 text-light">SATYAPRAKASH SAMANTARAY'S RECOGNITIONS AND AWARDS</span>    
   </nav> -->
