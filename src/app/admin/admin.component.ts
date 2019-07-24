@@ -18,7 +18,7 @@ export class AdminComponent implements OnInit {
   people1: Array<any>;
   people2: Array<any>;
   team3: Array<any>;
-
+  memberList: Array<any>;
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -28,6 +28,7 @@ export class AdminComponent implements OnInit {
     this.array2 = [];
     this.people1 = [];
     this.people2 = [];
+    this.memberList = [];
     this.members = [
       { id: 0, member: 'Alice' },
       { id: 1, member: 'Bob' },
@@ -138,12 +139,26 @@ export class AdminComponent implements OnInit {
           array1.splice(j, 1);
           console.log(people + "," + array1);
           this.people1 = people.concat(array1);
+          this.people1 = this.compare(this.people1);
           console.log(this.people1);
+
         }
 
       }
     }
 
+  }
+
+  compare(arr1){
+  
+    const objMap={};
+    
+    arr1.forEach((e1)=>this.members.forEach((e2)=> {if(e1 === e2.member.toLowerCase()){
+        this.memberList.push(e2.member);
+      }
+    }
+  ));
+  return this.memberList;
   }
 
   get_people1() {
@@ -171,6 +186,8 @@ export class AdminComponent implements OnInit {
           array1.splice(j, 1);
           console.log(people + "," + array1);
           this.people2 = people.concat(array1);
+          this.people2 = this.compare(this.people2);
+          this.people2 = this.people2.filter((el, i, a) => i === a.indexOf(el))
           console.log(this.people2);
         }
 
